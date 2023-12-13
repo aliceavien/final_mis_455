@@ -62,7 +62,54 @@ body {
 .submit-button:hover {
     background-color: #3182c8;
 }
+
 .svg-icon {
     width: 1.5rem;
     height: 1.5rem;
-  }
+}
+
+.search-result {
+    display: flex;
+    margin-top: 6rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.temp-box {
+    padding: 0.5rem 1rem;
+}
+
+.temp {
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+
+.feels {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.place-info {
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    text-align: center;
+}
+
+.place-name {
+    font-size: 2.25rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.main-container {
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
