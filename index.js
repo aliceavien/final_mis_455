@@ -3,7 +3,7 @@ const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday
 function showdata(data) {
     lat = data[0].lat;
     lon = data[0].lon;
-    var weather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=378d535bfca5d57fc5c0409174e9ac7a&units=metric`;
+    var weather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.api_key}&units=metric`;
     fetch(weather).then(res => res.json()).then(data => {
         document.getElementById("temp").innerText = data.main.temp + "°C";
         document.getElementById("feels").innerText = data.main.feels_like + "°C";
@@ -33,7 +33,7 @@ function showdata(data) {
     });
 
     let day = new Date().getDay();
-    url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=378d535bfca5d57fc5c0409174e9ac7a&units=metric`;
+    url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${process.env.api_key}&units=metric`;
     fetch(url).then(res => res.json()).then(data => {
         var tbody = document.getElementById("forecast");
         for (i = 0; i < 5; i++) {
@@ -55,20 +55,20 @@ function submit() {
     document.getElementById("place").innerText = loc;
 
 
-    city = `http://api.openweathermap.org/geo/1.0/direct?q=${loc}&appid=378d535bfca5d57fc5c0409174e9ac7a`;
+    city = `http://api.openweathermap.org/geo/1.0/direct?q=${loc}&appid=${process.env.api_key}`;
     fetch(city).then(response => response.json()).then(data => showdata(data));
 }
 function selected(loc){
     document.getElementById("forecast").innerHTML = "";
     document.getElementById("main").innerHTML="";
     document.getElementById("place").innerText = loc;
-    city = `http://api.openweathermap.org/geo/1.0/direct?q=${loc}&appid=378d535bfca5d57fc5c0409174e9ac7a`;
+    city = `http://api.openweathermap.org/geo/1.0/direct?q=${loc}&${process.env.api_key}`;
     fetch(city).then(response => response.json()).then(data => showdata(data));
 }
 
 // onload 
 date = new Date();
 document.getElementById("date").innerText = weekday[date.getDay()];
-city = "http://api.openweathermap.org/geo/1.0/direct?q=usa&appid=378d535bfca5d57fc5c0409174e9ac7a";
+city = `http://api.openweathermap.org/geo/1.0/direct?q=usa&appid=${process.env.api_key}`;
 
 fetch(city).then(response => response.json()).then(data => showdata(data));
