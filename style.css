@@ -2,7 +2,9 @@ body {
     width: 100%;
     padding: 2rem 1rem;
     margin: auto;
-
+    background-image: url('images/sky.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .main {
@@ -25,11 +27,8 @@ body {
 
 .search {
     display: flex;
-    /* Equivalent to flex in Tailwind */
     margin-bottom: 1rem;
-    /* Equivalent to mb-4 in Tailwind */
     padding-left: 1rem;
-    /* Equivalent to px-4 in Tailwind */
 }
 
 .search-box {
