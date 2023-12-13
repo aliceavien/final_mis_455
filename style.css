@@ -1,14 +1,68 @@
-body{
+body {
     width: 100%;
     padding: 2rem 1rem;
     margin: auto;
 
 }
-.main{
+
+.main {
     display: flex;
     flex-wrap: wrap;
 }
-.weather-data{
+
+.weather-data {
     width: 75%;
     margin-bottom: 2rem;
 }
+
+.backdrop {
+    backdrop-filter: blur(8px);
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 1rem;
+    height: 90vh;
+}
+
+.search {
+    display: flex;
+    /* Equivalent to flex in Tailwind */
+    margin-bottom: 1rem;
+    /* Equivalent to mb-4 in Tailwind */
+    padding-left: 1rem;
+    /* Equivalent to px-4 in Tailwind */
+}
+
+.search-box {
+    background-color: transparent;
+    width: 100%;
+    border-radius: 0.375rem;
+    border: 1px solid #ccc;
+    margin-right: 0;
+    color: #333;
+    padding: 0.75rem;
+    display: block;
+    outline: none;
+}
+
+.search-box:focus {
+    border-color: #3490dc;
+}
+
+.submit-button {
+    background-color: #3490dc;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 0 0.375rem 0.375rem 0;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+.submit-button:hover {
+    background-color: #3182c8;
+}
+.svg-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
