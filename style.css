@@ -148,7 +148,9 @@ body {
 .forecast-weather {
     padding: 0.5rem 1rem;
 }
-
+.forecast-date{
+    text-align: left;
+}
 .forecast-temperature {
     text-align: center;
 }
